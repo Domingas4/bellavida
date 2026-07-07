@@ -1,0 +1,62 @@
+/* =====================================================
+   TERMOS.CSS — específico da página Termos e Condições
+===================================================== */
+.termos-pagina{
+    text-align: center;
+}
+.termos-pagina h2{
+    color: var(--dourado);
+}
+.termos-pagina .card{
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+.termos-pagina .card h3{
+    color: var(--dourado);
+    margin-top: 20px;
+}
+.termos-pagina .card h3:first-child{
+    margin-top: 0;
+}
+.termos-pagina .card p{
+    margin-bottom: 10px;
+}
+
+.termos-aceitar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px;
+}
+.termos-aceitar input{
+    width: auto;
+    cursor: pointer;
+}
+.termos-aceitar label{
+    cursor: pointer;
+}
+
+.termos-acao button{
+    background-color: var(--bordo);
+    color: white;
+    font-weight: bold;
+    padding: 14px 40px;
+    border-radius: 30px;
+}
+.termos-acao button:disabled{
+    background-color: #334155;
+    color: var(--cinza-claro);
+    cursor: default;
+    transform: none;
+    opacity: 0.6;
+}
+.termos-acao button:not(:disabled):hover{
+    background-color: var(--bordo-claro);
+}
+.termos-dica{
+    margin-top: 10px;
+    font-size: 13px;
+    font-style: italic;
+}

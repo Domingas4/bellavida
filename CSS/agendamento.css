@@ -1,0 +1,104 @@
+/* =====================================================
+   AGENDAMENTO.CSS — específico da página Agendamento
+===================================================== */
+.agendamento h2{
+    text-align: center;
+    color: var(--dourado);
+}
+
+.agendamento-box{
+    background-color: var(--cinza);
+    padding: 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    max-width: 700px;
+    margin: 0 auto;
+}
+.agendamento-box label{
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+.agendamento-box input,
+.agendamento-box select,
+.agendamento-box textarea{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+}
+.agendamento form{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.linha-form{
+    display: flex;
+    gap: 20px;
+}
+.linha-form div{
+    flex: 1;
+}
+.agendamento button{
+    background-color: var(--bordo);
+    color: white;
+    font-weight: bold;
+}
+
+/* ---------- INDICADOR DE ETAPAS (1-2-3-4 + barra de progresso) ---------- */
+.passos{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+.passos-linha{
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    right: 25px;
+    height: 4px;
+    background-color: #334155;
+    z-index: 0;
+}
+.passos-progresso{
+    height: 100%;
+    width: 0%;
+    background-color: var(--bordo);
+    transition: width 0.4s ease;
+}
+.passo{
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #334155;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: white;
+}
+.passo.ativo{
+    background-color: var(--bordo);
+}
+
+/* ---------- ETAPAS DO FORMULÁRIO (mostrar só uma de cada vez) ---------- */
+.etapa{
+    display: none;
+}
+#etapa1{
+    display: block;
+}
+
+/* ---------- RESPONSIVIDADE ---------- */
+@media(max-width: 700px){
+    .linha-form{
+        flex-direction: column;
+    }
+    .passos{
+        flex-wrap: wrap;
+    }
+}

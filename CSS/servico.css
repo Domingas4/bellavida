@@ -1,0 +1,259 @@
+/* =====================================================
+   SERVICO.CSS — específico da página Serviços
+   (global.css já trata de tudo o resto)
+===================================================== */
+
+/* ---------- FILTROS ---------- */
+.Filtros-galeria{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 45px;
+}
+.filtro-btn{
+    background-color: transparent;
+    border: 2px solid var(--bordo);
+    color: var(--dourado);
+    padding: 10px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    transition: 0.25s ease;
+}
+.filtro-btn:hover{
+    border-color: var(--dourado);
+    transform: translateY(-2px);
+}
+.filtro-btn.activo{
+    background-color: var(--bordo);
+    color: white;
+    border-color: var(--bordo);
+}
+
+/* ---------- CABEÇALHO ---------- */
+.servicos-eyebrow{
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dourado);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.servicos-subtitulo{
+    text-align: center;
+    margin-bottom: 45px;
+}
+.servicos{
+    background: radial-gradient(ellipse at top, rgba(212,175,55,0.08), transparent 60%),
+                var(--preto);
+}
+
+/* ---------- CARTÃO DE SERVIÇO ---------- */
+.servicos-card{
+    background-color: var(--branco);
+    padding: 0;
+    border-radius: 18px;
+    border: none;
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+.servicos-card:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.5);
+}
+
+.servico-foto{
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.servico-conteudo{
+    padding: 22px 20px 28px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.servico-conteudo h3{
+    color: var(--bordo);
+    font-size: 20px;
+    margin-bottom: 8px;
+}
+.servico-conteudo p{
+    color: var(--preto);
+    opacity: 0.75;
+    font-size: 14px;
+    margin-bottom: 16px;
+}
+
+.servico-preco{
+    display: inline-block;
+    background-color: rgba(109,15,43,0.1);
+    color: var(--bordo);
+    font-weight: 700;
+    font-size: 13.5px;
+    padding: 6px 16px;
+    border-radius: 30px;
+    margin-bottom: 18px;
+}
+
+.servico-btn{
+    display: inline-block;
+    background-color: var(--bordo);
+    color: white;
+    font-weight: 700;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    padding: 11px 32px;
+    border-radius: 30px;
+    transition: 0.3s;
+    border: none;
+    cursor: pointer;
+}
+.servico-btn:hover{
+    background-color: var(--dourado);
+    color: var(--preto);
+    transform: translateY(-2px);
+}
+
+/* ---------- SETAS E BOLINHAS (usadas dentro da janela de detalhes) ---------- */
+.mini-anterior,
+.mini-seguinte{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(8,8,8,0.55);
+    color: var(--dourado);
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    z-index: 3;
+}
+.mini-anterior{ left: 10px; }
+.mini-seguinte{ right: 10px; }
+.mini-anterior:hover,
+.mini-seguinte:hover{
+    background: var(--dourado);
+    color: var(--preto);
+    transform: translateY(-50%) scale(1.1);
+}
+.mini-pontos{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    z-index: 3;
+}
+.mini-pontos button{
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.6);
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    transform: none;
+}
+.mini-pontos button.activo{
+    background: white;
+}
+
+/* ---------- JANELA DE DETALHES DO SERVIÇO ---------- */
+.modal-servico{
+    position: fixed;
+    inset: 0;
+    background: rgba(8,8,8,0.85);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+    z-index: 2000;
+    padding: 20px;
+}
+.modal-servico.ativo{
+    opacity: 1;
+    pointer-events: auto;
+}
+.modal-servico-caixa{
+    background: var(--branco);
+    border-radius: 18px;
+    max-width: 720px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    max-height: 92vh;
+    display: flex;
+    flex-direction: column;
+}
+.modal-servico-fechar{
+    position: absolute;
+    top: 12px;
+    right: 14px;
+    background: rgba(8,8,8,0.55);
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    font-size: 20px;
+    line-height: 1;
+    cursor: pointer;
+    z-index: 5;
+}
+.modal-servico-fechar:hover{
+    background: var(--dourado);
+    color: var(--preto);
+}
+.modal-servico-carrossel{
+    position: relative;
+    width: 100%;
+    height: 420px;
+    flex-shrink: 0;
+}
+.modal-servico-pista{
+    display: flex;
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+.modal-servico-pista img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+.modal-servico-info{
+    padding: 22px 24px 26px;
+    text-align: center;
+    overflow-y: auto;
+}
+.modal-servico-info h3{
+    color: var(--bordo);
+    font-size: 21px;
+}
+.modal-servico-info p{
+    color: var(--preto);
+    opacity: 0.75;
+    font-size: 14.5px;
+    margin-bottom: 16px;
+}

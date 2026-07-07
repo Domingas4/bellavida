@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Salão Bella Vida em Luanda  cabelo, unhas e estética com profissionais qualificados. Agende o seu atendimento online.">
+<meta name="keywords"
+content="salão de beleza, cabelo, unhas, estética, Luanda">
+<meta name="author"
+content="Domingas Watica">
+<title>Bella Vida | Cabelo, Unhas e Estética em Luanda</title>
+ <link rel="stylesheet" href="../CSS/global.css">
+<link rel="stylesheet" href="../CSS/index.css">
+<link rel="stylesheet" href="../CSS/servico.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Salão Bella Vida</div>
+        <div class="nav-acoes">
+            <button class="tema-toggle" aria-label="Alternar modo escuro/claro" title="Alternar modo escuro/claro">☾</button>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav>
+            <a href="index.html" class="link-activo">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="sobre-nos.html">Sobre nós</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <a href="agendamento.html" class="btn-nav">Agendar</a>
+        </nav>
+    </header>
+    <section class="hero">
+    <div class="hero-imagem">
+        <div class="hero-slider" id="heroSlider">
+            <div class="hero-slide activo" style="background-image:url('../Midia/banner.jpg')"></div>
+            <div class="hero-slide" style="background-image:url('../Midia/B.png')"></div>
+            <div class="hero-slide" style="background-image:url('../Midia/banner01.jpg')"></div>
+        </div>
+    </div>
+    <div class="hero-texto">
+        <span class="index-eyebrow">Salão Bella Vida · Luanda</span>
+        <h1>Onde a sua beleza ganha Vida</h1>
+        <p>CABELO . UNHAS . ESTÉTICA</p>
+        <div class="hero-botoes">
+            <a href="agendamento.html">
+                <button class="btn-primario">Agendar Agora</button>
+            </a>
+            <a href="servicos.html">
+                <button class="btn-secundario">Ver serviços</button>
+            </a>
+        </div>
+    </div>
+</section>
+   <section class="servicos-destaque" id="servicos">
+    <span class="index-eyebrow">O que fazemos</span>
+    <h2>Serviços em destaque</h2>
+    <div class="servicos-grid">
+        <div class="card servicos-card">
+            <img src="../Midia/corte-femenino.jpg" alt="Corte e Escova" class="servico-foto">
+            <div class="servico-conteudo">
+                <h3>Corte e Escova</h3>
+                <p>Transforme o seu visual com técnicas modernas</p>
+                <span class="servico-preco">12.500 Kz</span>
+            </div>
+        </div>
+        <div class="card servicos-card">
+            <img src="../Midia/Pedicure 1.jpg" alt="Manicure e pedicure" class="servico-foto">
+            <div class="servico-conteudo">
+                <h3>Manicure e pedicure</h3>
+                <p>Unhas elegantes para qualquer ocasião</p>
+                <span class="servico-preco">5.000 Kz</span>
+            </div>
+        </div>
+        <div class="card servicos-card">
+            <img src="../Midia/mascara 2.jpg" alt="Estética" class="servico-foto">
+            <div class="servico-conteudo">
+                <h3>Estética Facial</h3>
+                <p>Cuidados especializados para uma pele saudável.</p>
+                <span class="servico-preco">15.000 Kz</span>
+            </div>
+        </div>
+    </div>
+    <div class="galeria-cta">
+        <a href="servicos.html" class="btn-nav">Ver Todos os Serviços</a>
+    </div>
+</section>
+    <section class="galeria" id="galeria">
+    <h2>Galeria rápida</h2>
+    <p class="galeria-subtitulo">Mais um pouco do nosso trabalho</p>
+    <div class="galeria-grid">
+        <div class="foto">
+            <img src="../Midia/unhas.jpg" onclick="abrirImagem(this.src)" alt="Colagem de perucas - Salão Bella Vida">
+        </div>
+        <div class="foto">
+            <img src="../Midia/corte ondulado.jpg" onclick="abrirImagem(this.src)" alt="Estética - Salão Bella Vida">
+        </div>
+        <div class="foto">
+            <img src="../Midia/estetica 2.jpg" onclick="abrirImagem(this.src)" alt="Interior do Salão Bella Vida">
+        </div>
+    </div>
+    <div class="galeria-cta">
+        <a href="galeria.html" class="btn-nav">Ver Galeria Completa</a>
+    </div>
+</section>
+    <section class="testemunho">
+        <h2 style="text-align:center;">O que dizem as nossas clientes</h2>
+        <div class="carrossel">
+            <button class="carrossel-botao carrossel-anterior" aria-label="Testemunho anterior">&#8249;</button>
+            <div class="carrossel-pista">
+                <div class="carrossel-slide">
+                    <div class="cliente-foto">
+                        <img src="../Midia/funcionaria2.jpg" alt="Ana Ferreira, cliente satisfeita do Salão Bella Vida">
+                    </div>
+                    <h3>Ana Ferreira</h3>
+                    <p>“Fiquei apaixonada pelo resultado”</p>
+                </div>
+                <div class="carrossel-slide">
+                    <div class="cliente-foto">
+                        <img src="../Midia/cliente.jpg" alt="Jady José, cliente satisfeita do Salão Bella Vida">
+                    </div>
+                    <h3>Jady José</h3>
+                    <p>“Amei os cuidados”</p>
+                </div>
+                <div class="carrossel-slide">
+                    <div class="cliente-foto">
+                        <img src="../Midia/funcionaria 1.jpg" alt="Cliente satisfeita do Salão Bella Vida">
+                    </div>
+                    <h3>Lurdes Pacheco</h3>
+                    <p>“Atendimento impecável, super recomendo!”</p>
+                </div>
+                <div class="carrossel-slide">
+                    <div class="cliente-foto">
+                        <img src="../Midia/tranas1.jpg" alt="Jacinta Cutambicua, cliente satisfeita do Salão Bella Vida">
+                    </div>
+                    <h3>Jacinta Cutambicua</h3>
+                    <p>“Concerteza eu volto! amei estar no salão”</p>
+                </div>
+            </div>
+            <button class="carrossel-botao carrossel-seguinte" aria-label="Próximo testemunho">&#8250;</button>
+            <div class="carrossel-pontos"></div>
+        </div>
+        <div class="testemunho-cta">
+            <a href="testemunhos.html" class="btn-nav">Ver Mais Testemunhos</a>
+        </div>
+    </section>
+<footer class="rodape">
+        <div class="rodape-grelha">
+            <div class="rodape-marca">
+                <h3>Bella Vida</h3>
+                <p>Salão de beleza moderno em Luanda, especializado em cabelo, unhas e estética. Onde a sua beleza ganha vida.</p>
+                <div class="rodape-redes">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+                    <a href="https://wa.me/244927959108" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="testemunhos.html">Testemunhos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Apoio</h4>
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="mapa-site.html">Mapa do Site</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos.html">Termos e Condições</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rodape-base">
+            <p>Desenvolvido por: Domingas Watica - 2026</p>
+        </div>
+    </footer>
+    <button class="voltar-topo" aria-label="Voltar ao topo">&uarr;</button>
+    <script src="../JS/main.js" defer></script>
+</body>    
+</html>

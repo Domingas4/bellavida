@@ -1,0 +1,125 @@
+
+/* ---------- ETIQUETA (eyebrow) ---------- */
+.index-eyebrow{
+    display: block;
+    text-align: center;
+    letter-spacing: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--dourado);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.hero .index-eyebrow{
+    text-align: left;
+}
+
+/* ---------- HERO (imagem à esquerda, slider de 3 fotos) ---------- */
+.hero{
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+}
+.hero-imagem{
+    flex: 1;
+    height: 480px;
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background-image: url('../Midia/bannerP.jpg');
+    background-size: cover;
+    background-position: center;
+}
+.hero-slider{
+    position: absolute;
+    inset: 0;
+}
+.hero-slide{
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1.4s ease;
+}
+.hero-slide.activo{
+    opacity: 1;
+}
+.hero-texto{
+    flex: 1;
+    max-width: 550px;
+    animation: surgir 1.2s ease;
+}
+@keyframes surgir{
+    from{
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media(max-width: 900px){
+    .hero{
+        flex-direction: column;
+        text-align: center;
+        min-height: auto;
+        padding-top: 50px;
+    }
+    .hero .index-eyebrow{
+        text-align: center;
+    }
+    .hero-imagem{
+        width: 100%;
+        height: 300px;
+    }
+    .hero-botoes{
+        justify-content: center;
+    }
+}
+
+/* ---------- SERVIÇOS EM DESTAQUE ---------- */
+.servicos-destaque{
+    padding-top: 150px;
+    background-color: var(--preto);
+}
+.servicos-destaque h2{
+    text-align: center;
+    color: var(--dourado);
+}
+
+/* ---------- GALERIA RÁPIDA ---------- */
+.galeria{
+    background-color: var(--cinza);
+}
+.galeria h2{
+    text-align: center;
+    color: var(--dourado);
+}
+.galeria-subtitulo{
+    text-align: center;
+    margin-bottom: 40px;
+}
+.galeria-cta{
+    text-align: center;
+    margin-top: 35px;
+}
+
+/* ---------- TESTEMUNHOS (carrossel) ---------- */
+.testemunho{
+    background-color: var(--preto);
+}
+.cliente-foto img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--dourado);
+}
+.testemunho-cta{
+    text-align: center;
+    margin-top: 35px;
+}

@@ -1,0 +1,57 @@
+/* =====================================================
+   TESTEMUNHOS.CSS — específico da página Testemunhos
+===================================================== */
+.testemunhos h2{
+    text-align: center;
+    color: var(--dourado);
+}
+
+.depoimento{
+    background-color: var(--branco);
+    padding: 35px 25px 25px;
+    border-radius: 18px;
+    border: none;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+    position: relative;
+}
+.depoimento:hover{
+    transform: translateY(-8px);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.45);
+}
+.depoimento::before{
+    content: "\201C";
+    position: absolute;
+    top: 8px;
+    left: 20px;
+    font-size: 60px;
+    color: rgba(109,15,43,0.15);
+    font-family: Georgia, serif;
+    line-height: 1;
+}
+.depoimento img{
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    border: 3px solid var(--dourado);
+}
+.depoimento h3{
+    color: var(--bordo);
+    font-size: 17px;
+    text-align: center;
+}
+.depoimento p{
+    color: var(--preto);
+    opacity: 0.75;
+    font-size: 14.5px;
+    font-style: italic;
+    text-align: center;
+}
+.depoimento-estrelas{
+    display: block;
+    text-align: center;
+    color: var(--dourado);
+    font-size: 14px;
+    margin-bottom: 8px;
+}

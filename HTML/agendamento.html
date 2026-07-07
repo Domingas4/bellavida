@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Agende o seu atendimento no Salão Bella Vida de forma rápida e simples, online.">
+    <title>Bella Vida | Agendamento</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/agendamento.css">
+</head>
+<body>
+<header>
+        <div class="logo">Salão Bella Vida</div>
+        <div class="nav-acoes">
+            <button class="tema-toggle" aria-label="Alternar modo escuro/claro" title="Alternar modo escuro/claro">☾</button>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="sobre-nos.html">Sobre nós</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <a href="agendamento.html" class="btn-nav">Agendar</a>
+        </nav>
+    </header>
+<section class="agendamento">
+    <h2>Agende o seu atendimento de forma rápida e segura.</h2>
+    <div class="passos">
+    <div class="passos-linha">
+        <div class="passos-progresso" id="passosProgresso"></div>
+    </div>
+    <button type="button" class="passo">1</button>
+    <button type="button" class="passo">2</button>
+    <button type="button" class="passo">3</button>
+    <button type="button" class="passo">4</button>
+</div>
+    
+    <div class="agendamento">   
+    <form id="form-agendamento" data-validar>
+        <!-- ETAPA 1 -->
+        <div class="etapa" id="etapa1">
+            <div class="agendamento-box">
+                <label for="nome">Nome completo *</label>
+                <input id="nome" name="nome" type="text" placeholder="Ex: Ana Ferreira" required>
+
+                <label for="telemovel">Número de telemóvel *</label>
+                <input id="telemovel" name="telemovel" type="tel" placeholder="+244 9xx xxx xxx" required>
+
+                <label for="servico">Serviço pretendido *</label>
+                <select id="servico" name="servico" required>
+                    <option value="">Selecionar serviço...</option>
+                    <option>Corte Feminino</option>
+                    <option>Coloração</option>
+                    <option>Manicure</option>
+                    <option>Estética</option>
+                </select>
+
+                <div class="linha-form">
+                    <div>
+                        <label for="data">Data *</label>
+                        <input id="data" name="data" type="date" required>
+                    </div>
+                    <div>
+                        <label for="hora">Hora *</label>
+                        <input id="hora" name="hora" type="time" required>
+                    </div>
+                </div>
+
+                <label for="observacoes">Observações</label>
+                <textarea id="observacoes" name="observacoes" placeholder="Ex: Cabelo muito comprido..."></textarea>
+
+                <button type="button" data-seguinte>Seguinte</button>
+            </div>
+        </div>
+
+        <!-- ETAPA 2 -->
+        <div class="etapa" id="etapa2">
+            <div class="agendamento-box">
+                <h3>Escolha um profissional</h3>
+                <label for="profissional">Profissional *</label>
+                <select id="profissional" name="profissional" required>
+                    <option value="">Selecionar...</option>
+                    <option>Leonor</option>
+                    <option>Fátima</option>
+                    <option>Carla</option>
+                </select>
+                <p>Escolha o profissional da sua preferência.</p>
+                <div class="linha-form">
+                    <button type="button" data-anterior>Anterior</button>
+                    <button type="button" data-seguinte>Seguinte</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 3 -->
+        <div class="etapa" id="etapa3">
+            <div class="agendamento-box">
+                <h3>Confirmação automática</h3>
+                <p>Receberás confirmação via WhatsApp ou email.</p>
+                <label for="email-confirmacao">Email *</label>
+                <input id="email-confirmacao" name="email" type="email" placeholder="Teu email" required>
+                <label for="whatsapp-confirmacao">WhatsApp *</label>
+                <input id="whatsapp-confirmacao" name="whatsapp" type="tel" placeholder="WhatsApp" required>
+                <div class="linha-form">
+                    <button type="button" data-anterior>Anterior</button>
+                    <button type="button" data-seguinte>Seguinte</button>
+                </div>
+            </div>
+        </div>
+
+        <!-- ETAPA 4 -->
+        <div class="etapa" id="etapa4">
+            <div class="agendamento-box">
+                <h3>Pagamento / Sinal</h3>
+                <label for="pagamento">Forma de pagamento *</label>
+                <select id="pagamento" name="pagamento" required>
+                    <option value="">Selecionar...</option>
+                    <option>Pagar no salão</option>
+                    <option>Pagar sinal antecipado</option>
+                </select>
+                <p>O pagamento antecipado garante a reserva.</p>
+                <div class="linha-form">
+                    <button type="button" data-anterior>Anterior</button>
+                    <button type="submit">Enviar pedido de marcação</button>
+                </div>
+                <p class="form-sucesso">Pedido de marcação enviado com sucesso! Entraremos em contacto em breve.</p>
+            </div>
+        </div>
+    </form>
+    </div>
+</section>
+<footer class="rodape">
+        <div class="rodape-grelha">
+            <div class="rodape-marca">
+                <h3>Bella Vida</h3>
+                <p>Salão de beleza moderno em Luanda, especializado em cabelo, unhas e estética. Onde a sua beleza ganha vida.</p>
+                <div class="rodape-redes">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+                    <a href="https://wa.me/244927959108" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="testemunhos.html">Testemunhos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Apoio</h4>
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="mapa-site.html">Mapa do Site</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos.html">Termos e Condições</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rodape-base">
+            <p>Desenvolvido por: Domingas Watica - 2026</p>
+        </div>
+    </footer>
+    <button class="voltar-topo" aria-label="Voltar ao topo">&uarr;</button>
+    <script src="../JS/main.js" defer></script>
+</body>
+</html>

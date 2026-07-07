@@ -1,0 +1,188 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Conheça os serviços do Salão Bella Vida: cortes, coloração, tranças, manicure, pedicure e tratamentos de estética em Luanda.">
+    <title>Bella Vida | Serviços</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/servico.css">
+</head>
+<body>
+<header>
+        <div class="logo">Salão Bella Vida</div>
+        <div class="nav-acoes">
+            <button class="tema-toggle" aria-label="Alternar modo escuro/claro" title="Alternar modo escuro/claro">☾</button>
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="servicos.html" class="link-activo">Serviços</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="sobre-nos.html">Sobre nós</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <a href="agendamento.html" class="btn-nav">Agendar</a>
+        </nav>
+    </header>
+<section class="servicos">
+    <span class="servicos-eyebrow">Os nossos cuidados</span>
+    <h2>Serviços</h2>
+    <p class="servicos-subtitulo">Sinta-se ainda mais bonita com os nossos cuidados especiais</p>
+    <div class="Filtros-galeria">
+        <button class="filtro-btn activo" data-filtro="Todos">Todos</button>
+        <button class="filtro-btn" data-filtro="Cabelo">Cabelo</button>
+        <button class="filtro-btn" data-filtro="Unhas">Unhas</button>
+        <button class="filtro-btn" data-filtro="Estetica">Estética</button>
+    </div>
+
+    <div class="servicos-grid">
+
+        <div class="card servicos-card" data-categoria="Cabelo">
+            <img src="../Midia/corte-femenino.jpg" alt="Corte Feminino" class="servico-foto" onclick="abrirImagem(this.src)">
+            <div class="servico-conteudo">
+                <h3>Corte Feminino</h3>
+                <p>Corte + Lavagem + Escova</p>
+                <span class="servico-preco">12.500,00 Kz</span>
+                <button type="button" class="servico-btn" data-servico="corte-feminino">Mais</button>
+            </div>
+        </div>
+
+        <div class="card servicos-card" data-categoria="Cabelo">
+            <img src="../Midia/trancas diferentes.jpg" alt="Tranças" class="servico-foto" onclick="abrirImagem(this.src)">
+            <div class="servico-conteudo">
+                <h3>Tranças</h3>
+                <p>Lavagem + Breche</p>
+                <span class="servico-preco">14.000,00 Kz</span>
+                <button type="button" class="servico-btn" data-servico="trancas">Mais</button>
+            </div>
+        </div>
+
+        <div class="card servicos-card" data-categoria="Cabelo">
+            <img src="../Midia/coloracao2.jpg" alt="Coloração" class="servico-foto" onclick="abrirImagem(this.src)">
+            <div class="servico-conteudo">
+                <h3>Coloração Completa</h3>
+                <p>Produtos Profissionais</p>
+                <span class="servico-preco">8.000,00 Kz</span>
+                <button type="button" class="servico-btn" data-servico="coloracao">Mais</button>
+            </div>
+        </div>
+
+        <div class="card servicos-card" data-categoria="Unhas">
+            <img src="../Midia/unhas elegantes.jpg" alt="Manicure e Pedicure" class="servico-foto" onclick="abrirImagem(this.src)">
+            <div class="servico-conteudo">
+                <h3>Manicure e Pedicure</h3>
+                <p>Limpeza + Massagem + Verniz</p>
+                <span class="servico-preco">7.000,00 Kz</span>
+                <button type="button" class="servico-btn" data-servico="manicure-pedicure">Mais</button>
+            </div>
+        </div>
+
+        <div class="card servicos-card" data-categoria="Cabelo">
+            <img src="../Midia/piruca1.jpg" alt="Colagem de Perucas" class="servico-foto" onclick="abrirImagem(this.src)">
+            <div class="servico-conteudo">
+                <h3>Colagem de Perucas</h3>
+                <p>Lavagem + Viradas + Tratamento da Peruca</p>
+                <span class="servico-preco">11.000,00 Kz</span>
+                <button type="button" class="servico-btn" data-servico="perucas">Mais</button>
+            </div>
+        </div>
+
+        <div class="card servicos-card" data-categoria="Estetica">
+            <img src="../Midia/estetica 2.jpg" alt="Estética" class="servico-foto" onclick="abrirImagem(this.src)">
+            <div class="servico-conteudo">
+                <h3>Estética</h3>
+                <p>Limpeza facial + Massagens</p>
+                <span class="servico-preco">18.000,00 Kz</span>
+                <button type="button" class="servico-btn" data-servico="estetica">Mais</button>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="modal-servico" id="modalServico">
+        <div class="modal-servico-caixa">
+            <button class="modal-servico-fechar" aria-label="Fechar">&times;</button>
+            <div class="modal-servico-carrossel">
+                <div class="modal-servico-pista"></div>
+                <button class="mini-anterior" aria-label="Foto anterior">&#8249;</button>
+                <button class="mini-seguinte" aria-label="Foto seguinte">&#8250;</button>
+                <div class="mini-pontos"></div>
+            </div>
+            <div class="modal-servico-info">
+                <h3 id="modalServicoTitulo"></h3>
+                <p id="modalServicoDescricao"></p>
+                <span class="servico-preco" id="modalServicoPreco"></span>
+                <a href="agendamento.html" class="servico-btn">Agendar este serviço</a>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="modal-servico" id="modalServico">
+    <div class="modal-servico-caixa">
+        <button class="modal-servico-fechar" aria-label="Fechar">&times;</button>
+        <div class="modal-servico-carrossel">
+            <div class="modal-servico-pista"></div>
+            <button class="mini-anterior" aria-label="Foto anterior">&#8249;</button>
+            <button class="mini-seguinte" aria-label="Foto seguinte">&#8250;</button>
+            <div class="mini-pontos"></div>
+        </div>
+        <div class="modal-servico-info">
+            <h3 id="modalServicoTitulo"></h3>
+            <p id="modalServicoDescricao"></p>
+            <span class="servico-preco" id="modalServicoPreco"></span>
+            <a href="agendamento.html" class="servico-btn">Agendar este serviço</a>
+        </div>
+    </div>
+</div>
+<footer class="rodape">
+        <div class="rodape-grelha">
+            <div class="rodape-marca">
+                <h3>Bella Vida</h3>
+                <p>Salão de beleza moderno em Luanda, especializado em cabelo, unhas e estética. Onde a sua beleza ganha vida.</p>
+                <div class="rodape-redes">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+                    <a href="https://wa.me/244927959108" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Apoio</h4>
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="mapa-site.html">Mapa do Site</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos.html">Termos e Condições</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rodape-base">
+            <p>Desenvolvido por: Domingas Watica - 2026</p>
+        </div>
+    </footer>
+    <button class="voltar-topo" aria-label="Voltar ao topo">&uarr;</button>
+    <script src="../JS/main.js" defer></script>
+</body>
+</html>

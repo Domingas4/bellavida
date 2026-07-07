@@ -1,0 +1,40 @@
+/* =====================================================
+   PRIVACIDADE.CSS — específico da página Política de Privacidade
+===================================================== */
+.privacidade{
+    text-align: center;
+}
+.privacidade h2{
+    color: var(--dourado);
+}
+.privacidade-data{
+    font-size: 13px;
+    font-style: italic;
+    margin-bottom: 30px;
+}
+.privacidade .card{
+    text-align: left;
+    max-width: 700px;
+    margin: 0 auto;
+}
+.privacidade .card h3{
+    color: var(--dourado);
+    margin-top: 20px;
+}
+.privacidade .card h3:first-child{
+    margin-top: 0;
+}
+.privacidade .card p{
+    margin-bottom: 10px;
+}
+.privacidade-contacto{
+    margin-top: 25px;
+}
+.privacidade-contacto a{
+    color: var(--dourado);
+    font-weight: 600;
+    text-decoration: underline;
+}
+.privacidade-contacto a:hover{
+    color: var(--bordo-claro);
+}
