@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+     <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-Y61495QPPX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-Y61495QPPX');
+</script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dicas de cuidados com o cabelo, unhas e estética no blog do Salão Bella Vida.">
+    <title>Bella Vida | Blog</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/blog.css">
+</head>
+<body>
+<header>
+        <div class="logo">Salão Bella Vida</div>
+        <div class="nav-acoes">
+           
+            <button class="menu-toggle" aria-label="Abrir menu" aria-expanded="false">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="servicos.html">Serviços</a>
+            <a href="galeria.html">Galeria</a>
+            <a href="sobre-nos.html">Sobre nós</a>
+            <a href="contacto.html">Contacto</a>
+            <a href="blog.html" class="link-activo">Blog</a>
+            <a href="faq.html">FAQ</a>
+            <a href="agendamento.html" class="btn-nav">Agendar</a>
+        </nav>
+    </header>
+<section class="blog">
+    <h2>Dicas de beleza e tendências</h2>
+    <input type="text" id="pesquisaBlog" placeholder="Pesquisar artigo..." class="Pesquisar-blog">
+
+    <div class="blog-grid">
+
+        <div class="card post-card">
+            <img src="../Midia/cuidados-para-o-cabelo.jpg" alt="Cuidados para o cabelo" class="blog-img-capa">
+            <div class="post-conteudo">
+                <h3>5 cuidados essenciais para o cabelo</h3>
+                <p>Pequenos hábitos diários que fazem toda a diferença na saúde e brilho do teu cabelo.</p>
+                <button type="button" class="blog-btn" data-post="cuidados-cabelo">Ler mais</button>
+            </div>
+        </div>
+
+        <div class="card post-card">
+            <img src="../Midia/unhas elegantes.jpg" alt="Tendências de unhas" class="blog-img-capa">
+            <div class="post-conteudo">
+                <h3>Tendências de unhas para 2025</h3>
+                <p>Das cores minimalistas aos designs statement o que vai marcar as tuas mãos este ano.</p>
+                <button type="button" class="blog-btn" data-post="tendencias-unhas">Ler mais</button>
+            </div>
+        </div>
+
+        <div class="card post-card">
+            <img src="../Midia/dica de coloracao.jpg" alt="Coloração ideal" class="blog-img-capa">
+            <div class="post-conteudo">
+                <h3>Como escolher a coloração certa</h3>
+                <p>Um guia simples para escolheres a cor de cabelo que mais valoriza o teu tom de pele.</p>
+                <button type="button" class="blog-btn" data-post="coloracao-certa">Ler mais</button>
+            </div>
+        </div>
+
+    </div>
+
+    <p class="blog-vazio" hidden>Nenhum artigo encontrado com essa pesquisa.</p>
+
+    <div class="modal-blog" id="modalBlog">
+        <div class="modal-blog-caixa">
+            <button class="modal-blog-fechar" aria-label="Fechar">&times;</button>
+            <div class="modal-blog-carrossel">
+                <div class="modal-blog-pista"></div>
+                <button class="blog-anterior" aria-label="Foto anterior">&#8249;</button>
+                <button class="blog-seguinte" aria-label="Foto seguinte">&#8250;</button>
+                <div class="blog-pontos"></div>
+            </div>
+            <div class="modal-blog-info">
+                <h3 id="modalBlogTitulo"></h3>
+                <div id="modalBlogCorpo"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="rodape">
+        <div class="rodape-grelha">
+            <div class="rodape-marca">
+                <h3>Bella Vida</h3>
+                <p>Salão de beleza moderno em Luanda, especializado em cabelo, unhas e estética. Onde a sua beleza ganha vida.</p>
+                <div class="rodape-redes">
+                    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">IG</a>
+                    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">FB</a>
+                    <a href="https://tiktok.com" target="_blank" rel="noopener" aria-label="TikTok">TT</a>
+                    <a href="https://wa.me/244927959108" target="_blank" rel="noopener" aria-label="WhatsApp">WA</a>
+                </div>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Menu</h4>
+                <ul>
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="servicos.html">Serviços</a></li>
+                    <li><a href="galeria.html">Galeria</a></li>
+                    <li><a href="sobre-nos.html">Sobre nós</a></li>
+                    <li><a href="testemunhos.html">Testemunhos</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Apoio</h4>
+                <ul>
+                    <li><a href="contacto.html">Contacto</a></li>
+                    <li><a href="faq.html">FAQ</a></li>
+                    <li><a href="agendamento.html">Agendamento</a></li>
+                    <li><a href="newsletter.html">Newsletter</a></li>
+                    <li><a href="mapa-site.html">Mapa do Site</a></li>
+                </ul>
+            </div>
+            <div class="rodape-coluna">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="privacidade.html">Política de Privacidade</a></li>
+                    <li><a href="termos.html">Termos e Condições</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="rodape-base">
+            <p>Desenvolvido por: Domingas Watica - 2026</p>
+        </div>
+    </footer>
+    <button class="voltar-topo" aria-label="Voltar ao topo">&uarr;</button>
+    <script src="../JS/main.js" defer></script>
+</body>
+</html>
